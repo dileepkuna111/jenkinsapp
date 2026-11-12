@@ -14,8 +14,8 @@ pipeline {
                 sh '''
                     echo "Deploying HTML files to Nginx web root..."
                     # Clean default files and copy new HTML files
-                    sudo rm -rf /usr/share/nginx/html/*
-                    sudo cp -r * /usr/share/nginx/html/
+                    rm -rf /usr/share/nginx/html/*
+                    cp -r * /usr/share/nginx/html/
                     
                     # Ensure correct permissions for Nginx
                     sudo chmod -R 755 /usr/share/nginx/html
